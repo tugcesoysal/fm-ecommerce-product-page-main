@@ -91,7 +91,7 @@ header {
   height: 95px;
   display: flex;
   align-items: self-start;
-  padding: 4rem 7%;
+  padding: 2rem 7%;
   border-bottom: 2px solid var(--light-grayish-blue);
 }
 
@@ -113,7 +113,7 @@ nav ul {
 nav ul li {
   list-style: none;
   color: var(--grayish-blue);
-  padding-bottom: 4rem;
+  padding-bottom: 2.5rem;
 }
 
 nav ul li:hover {
@@ -189,6 +189,21 @@ nav ul li:hover {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .thumbnails {
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .thumbnailDiv {
+    width: 6rem;
+  }
 }
 
 .thumbnail {
@@ -365,7 +380,7 @@ header {
 
 .cartEmpty {
   text-align: center;
-  margin-top: 20%;
+  margin-top: 15%;
   color: var(--dark-grayish-blue);
   font-weight: 700;
 }
@@ -633,6 +648,7 @@ header {
   }
 
   .menu {
+    display: block;
     z-index: 4;
     background-color: var(--white);
     width: 60%;

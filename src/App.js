@@ -135,7 +135,7 @@ function App() {
           </ul>
         </nav>
         {menuOpen && (
-          <div className="menu">
+          <div className="menu active ">
             <IoMdClose
               className="menu-close icon"
               onClick={() => setMenuOpen(false)}
@@ -179,7 +179,11 @@ function App() {
             {product.thumbnails.map((thumbnail, index) => (
               <div
                 key={index}
-                className={index === mainImageIndex ? "activeImageDiv" : ""}
+                className={
+                  index === mainImageIndex
+                    ? "activeImageDiv thumbnailDiv"
+                    : "thumbnailDiv"
+                }
               >
                 <img
                   src={thumbnail}
